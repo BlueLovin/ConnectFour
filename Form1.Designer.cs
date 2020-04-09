@@ -141,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(540, 9);
+            this.label1.Location = new System.Drawing.Point(541, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 41);
             this.label1.TabIndex = 4;
@@ -152,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(543, 50);
+            this.label2.Location = new System.Drawing.Point(543, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 20);
             this.label2.TabIndex = 5;
@@ -198,6 +198,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Connect Four -- Made by Matthew Jury";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
