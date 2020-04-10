@@ -109,7 +109,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(607, 162);
+            this.button1.Location = new System.Drawing.Point(614, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 51);
             this.button1.TabIndex = 1;
@@ -121,17 +121,17 @@
             // 
             this.MoveLabel.AutoSize = true;
             this.MoveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MoveLabel.Location = new System.Drawing.Point(587, 320);
+            this.MoveLabel.Location = new System.Drawing.Point(599, 320);
             this.MoveLabel.Name = "MoveLabel";
-            this.MoveLabel.Size = new System.Drawing.Size(95, 25);
+            this.MoveLabel.Size = new System.Drawing.Size(88, 25);
             this.MoveLabel.TabIndex = 2;
-            this.MoveLabel.Text = "Moves: ";
+            this.MoveLabel.Text = "Moves:";
             // 
             // MoveCount
             // 
             this.MoveCount.AutoSize = true;
             this.MoveCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MoveCount.Location = new System.Drawing.Point(673, 322);
+            this.MoveCount.Location = new System.Drawing.Point(680, 322);
             this.MoveCount.Name = "MoveCount";
             this.MoveCount.Size = new System.Drawing.Size(20, 24);
             this.MoveCount.TabIndex = 3;
@@ -152,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(543, 81);
+            this.label2.Location = new System.Drawing.Point(542, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 20);
             this.label2.TabIndex = 5;
