@@ -121,7 +121,7 @@
             // 
             this.MoveLabel.AutoSize = true;
             this.MoveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MoveLabel.Location = new System.Drawing.Point(599, 320);
+            this.MoveLabel.Location = new System.Drawing.Point(588, 320);
             this.MoveLabel.Name = "MoveLabel";
             this.MoveLabel.Size = new System.Drawing.Size(88, 25);
             this.MoveLabel.TabIndex = 2;
@@ -131,7 +131,7 @@
             // 
             this.MoveCount.AutoSize = true;
             this.MoveCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MoveCount.Location = new System.Drawing.Point(680, 322);
+            this.MoveCount.Location = new System.Drawing.Point(669, 322);
             this.MoveCount.Name = "MoveCount";
             this.MoveCount.Size = new System.Drawing.Size(20, 24);
             this.MoveCount.TabIndex = 3;
@@ -198,7 +198,6 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Connect Four -- Made by Matthew Jury";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -39,7 +39,7 @@ namespace ConnectFour
         /// </summary>
         public void Form1_Paint(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < column7Count; i++)
+            for (int i = 0; i < column7Count; i++)//COLUMN 7
             {
                 if (i == 0)
                 {
@@ -51,16 +51,16 @@ namespace ConnectFour
                     YellowPiece.y -= 70;
                     RedPiece.y -= 70;
                 }
-                if (Column7[i + 1] == 'R')
+                if (Column7[i + 1] == 'R')//if red, draw red
                 {
                     e.Graphics.FillEllipse(Brushes.Red, 428, YellowPiece.y - 70, 54, 54);
                 }
-                if (Column7[i + 1] == 'Y')
+                if (Column7[i + 1] == 'Y')//if yellow, draw yellow
                 {
                     e.Graphics.FillEllipse(Brushes.Yellow, 428, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column6Count; i++)
+            for (int i = 0; i < column6Count; i++)//COLUMN 6
             {
                 if (i == 0)
                 {
@@ -81,7 +81,7 @@ namespace ConnectFour
                     e.Graphics.FillEllipse(Brushes.Yellow, 358, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column5Count; i++)
+            for (int i = 0; i < column5Count; i++)//COLUMN 5
             {
                 if (i == 0)
                 {
@@ -102,7 +102,7 @@ namespace ConnectFour
                     e.Graphics.FillEllipse(Brushes.Yellow, 288, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column4Count; i++)
+            for (int i = 0; i < column4Count; i++)//COLUMN 4
             {
                 if (i == 0)
                 {
@@ -123,7 +123,7 @@ namespace ConnectFour
                     e.Graphics.FillEllipse(Brushes.Yellow, 218, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column3Count; i++)
+            for (int i = 0; i < column3Count; i++)//COLUMN 3
             {
                 if (i == 0)
                 {
@@ -144,7 +144,7 @@ namespace ConnectFour
                     e.Graphics.FillEllipse(Brushes.Yellow, 148, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column2Count; i++)
+            for (int i = 0; i < column2Count; i++)//COLUMN 2
             {
                 if (i == 0)
                 {
@@ -165,7 +165,7 @@ namespace ConnectFour
                     e.Graphics.FillEllipse(Brushes.Yellow, 78, YellowPiece.y - 70, 54, 54);
                 }
             }
-            for (int i = 0; i < column1Count; i++)
+            for (int i = 0; i < column1Count; i++)//COLUMN 1
             {
                 if (i == 0)
                 {
@@ -187,8 +187,14 @@ namespace ConnectFour
                 }
             }
         }
-        public void changeTurn()
+        public void changeTurn()//called on every click.
         {
+            if (turnCounter >= 42)
+            {
+                MessageBox.Show("Draw!", "Very Impressive",
+                    MessageBoxButtons.OK, MessageBoxIcon.Question);
+                NewGame();
+            }
             turnCounter++;
             MoveCount.Text = turnCounter.ToString();
             TurnBool = !TurnBool;
@@ -201,7 +207,7 @@ namespace ConnectFour
             if (column1Count < 7)
             {
                 column1Count++;
-                if (TurnBool)
+                if (TurnBool)//add data to column array based on the turn
                 {
                     Column1[column1Count] = 'R';
                 }
@@ -808,6 +814,7 @@ namespace ConnectFour
                 }
                 if (Diagonal11.Skip(i).Take(redwinner.Length).SequenceEqual(redwinner))
                 {
+                    thereIsWinner = true;
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
@@ -879,9 +886,5 @@ namespace ConnectFour
             Refresh();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
