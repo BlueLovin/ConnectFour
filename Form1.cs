@@ -5,6 +5,17 @@ using System.Windows.Forms;
 
 namespace ConnectFour
 {
+    /// <summary>
+    /// This program stores each piece in a CHAR array 
+    /// by column! every click, a loop iterates through
+    /// each array and tries to find FOUR IN A ROW!
+    /// 
+    /// the arrays are also used to draw each piece accurately.
+    /// a loop iterates every array and draws the correct piece
+    /// accordingly.
+    /// 
+    /// Made by Matthew Jury. April 2020
+    /// </summary>
     public partial class Form1 : Form
     {
         bool TurnBool = false; //red=false, yellow = true
@@ -377,9 +388,6 @@ namespace ConnectFour
             char[] Diagonal13 = { Column4[6], Column3[5], Column2[4], Column1[3]};
             #endregion
             #region ROWCHECKS
-            ////////////////////
-            ////ROW 1 CHECK/////
-            ////////////////////
 
             for (int i = 0; i < 8 - yellowwinner.Length; i++)//YELLOW
             {
@@ -395,13 +403,6 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Row 1");
                     break;
                 }
-            }
-            ////////////////////
-            ////ROW 2 CHECK/////
-            ////////////////////
-
-            for (int i = 0; i <= 8 - yellowwinner.Length; i++)//YELLOW
-            {
                 if (row2.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -414,13 +415,6 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Row 2");
                     break;
                 }
-            }
-            ////////////////////
-            ////ROW 3 CHECK/////
-            ////////////////////
-
-            for (int i = 0; i < 8 - yellowwinner.Length; i++)//YELLOW
-            {
                 if (row3.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -433,13 +427,6 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Row 3");
                     break;
                 }
-            }
-            ////////////////////
-            ////ROW 4 CHECK/////
-            ////////////////////
-
-            for (int i = 0; i < 8 - yellowwinner.Length; i++)//YELLOW
-            {
                 if (row4.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -452,13 +439,6 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Row 4");
                     break;
                 }
-            }
-            ////////////////////
-            ////ROW 5 CHECK/////
-            ////////////////////
-
-            for (int i = 0; i < 8 - yellowwinner.Length; i++)//YELLOW
-            {
                 if (row5.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -471,13 +451,6 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Row 5");
                     break;
                 }
-            }
-            ////////////////////
-            ////ROW 6 CHECK/////
-            ////////////////////
-
-            for (int i = 0; i < 8 - yellowwinner.Length; i++)//YELLOW
-            {
                 if (row6.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -621,11 +594,10 @@ namespace ConnectFour
             }
             #endregion
             #region DIAGONALCHECKS
-            //////////////////////
-            ///DIAGONAL CHECK 1///
-            //////////////////////
+            
             for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
             {
+                ///DIAGONAL CHECK 1///
                 if (Diagonal1.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -638,12 +610,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 2///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 2///
                 if (Diagonal2.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -656,12 +623,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 3///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 3///
                 if (Diagonal3.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -674,12 +636,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 4///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 4///
                 if (Diagonal4.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -692,12 +649,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 5///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 5///
                 if (Diagonal5.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -710,12 +662,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 6///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 6///
                 if (Diagonal6.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -728,12 +675,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 7///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 7///
                 if (Diagonal7.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -746,12 +688,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 8///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 8///
                 if (Diagonal8.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -764,12 +701,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            //////////////////////
-            ///DIAGONAL CHECK 9///
-            //////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 9///
                 if (Diagonal9.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -782,12 +714,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            /////////////////////
-            //DIAGONAL CHECK 10//
-            /////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 10///
                 if (Diagonal10.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -800,12 +727,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            /////////////////////
-            //DIAGONAL CHECK 11//
-            /////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 11///
                 if (Diagonal11.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -818,12 +740,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            /////////////////////
-            //DIAGONAL CHECK 12//
-            /////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 12///
                 if (Diagonal12.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -836,12 +753,8 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
-            }
-            /////////////////////
-            //DIAGONAL CHECK 13//
-            /////////////////////
-            for (int i = 0; i < 7 - yellowwinner.Length; i++)//YELLOW
-            {
+                ///DIAGONAL CHECK 13///
+
                 if (Diagonal13.Skip(i).Take(yellowwinner.Length).SequenceEqual(yellowwinner))
                 {
                     thereIsWinner = true;
@@ -854,6 +767,7 @@ namespace ConnectFour
                     MessageBox.Show("Red wins, Diagonal");
                     break;
                 }
+                ////end DIAGONAL CHECKS////
             }
             #endregion
 
@@ -885,6 +799,5 @@ namespace ConnectFour
 
             Refresh();
         }
-
     }
 }
